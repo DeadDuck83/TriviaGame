@@ -82,6 +82,14 @@ var questions = [
 ];
 console.log(questions);
 
+// loop through questions
 // print question and options to HTML
+// selection varified when the nextQuestion is hit
+// if correct opt selected var correctAnswers++, proceed to next question
+// if !correct do not add, proceed to next question
 
-//
+// 
+
+// Add message to display if incorrect? Maybe in the object as a right message and wrong message
+
+// 
