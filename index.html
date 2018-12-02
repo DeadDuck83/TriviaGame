@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Questions</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="./asseets/css/styles.css">
+
 </head>
+
 <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Random Question Quiz</h1>
+            <p class="lead">This quiz will test your brain, your mind and your brain too.</p>
+
+        </div>
+    </div>
+
 
     <section>
         <div class="container">
-            <div id="triviaQuestions" class="">
-                <h2>Random question quiz</h2>
-                <div id="question" class="question">When will I finish this project?</div>
+                <div class="card mb-3">
+                        <img class="card-img-top" src="./asseets/images/coolImage.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title" id="question">Card title</h5>
+                          <div id="triviaQuestions" class="">
 
-                <div class="option"><input type="radio" name="option" value="opt1">
-                    <span id="opt1">Never</span>
-                </div>
-                <div class="option"><input type="radio" name="option" value="opt2">
-                    <span id="opt2">Late</span>
-                </div>
-                <div class="option"><input type="radio" name="option" value="opt3">
-                    <span id="opt3">Sometime just after Saturday</span>
-                </div>
-                <div class="option"><input type="radio" name="option" value="opt4">
-                    <span id="opt4">When it is almost done</span>
-                </div>
-                <button id="submit" class="submit-btn" onclick="nextQuestion();">Next</button>
-            </div>
+                                <div class="option">
+                                    <input id="opt1" type="radio" class="radioStyles" name="option" value="opt0">long text with lots of words that will ottally break thae spand that needs to be here.
+                                </div>
+                                <div class="option">
+                                    <input id="opt2" type="radio" class="radioStyles" name="option" value="opt1">
+                                </div>
+                                <div class="option">
+                                    <input id="opt3" type="radio" class="radioStyles" name="option" value="opt2">
+                                </div>
+                                <div class="option">
+                                    <input id="opt4" type="radio" class="radioStyles" name="option" value="opt3">
+                                </div>
+                                <div class="clearfix"></div>
+                                <p class="card-text text-center"><small class="text-muted text-center" id="totalQuestions">1 0f 10 questions</small></p>
+                            </div>
+                            <button id="submit" class="submit-btn btn btn-primary btn-lg btn-block mt-4">Next Question</button>
+
+                          
+                        </div>
+                      </div>
+            
         </div>
     </section>
-    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
     <script src="asseets/js/app.js"></script>
 </body>
+
 </html>
