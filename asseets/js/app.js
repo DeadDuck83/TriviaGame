@@ -91,7 +91,16 @@ $(document).ready(function () {
 
     // loop through questionsAnswers
     function startGame() {
+        // resets radio button position
+        $("input[name='option']:checked").attr('checked',false);
         // set the question number
+        var currentQuestion = $("#question");
+
+        if( questionNumber >= questionsAnswers.length){
+            currentQuestion.text("You got " + correctGuesses + " out of " + questionsAnswers.length);
+            $("#triviaQuestions").css('display','none');
+            return startGame();
+        }
 
         // print question and options to HTML
         console.log(questionsAnswers[questionNumber].opt1);
@@ -107,8 +116,13 @@ $(document).ready(function () {
         var opt4 = $("#opt4").attr({
             value: questionsAnswers[questionNumber].opt4
         });
+        currentQuestion.text(questionsAnswers[questionNumber].question);
 
         opt1.text(questionsAnswers[questionNumber].opt1);
+        opt2.text(questionsAnswers[questionNumber].opt2);
+        opt3.text(questionsAnswers[questionNumber].opt3);
+        opt4.text(questionsAnswers[questionNumber].opt4);
+
         $("#totalQuestions").text((questionNumber + 1) + " of " + questionsAnswers.length);
 
 
